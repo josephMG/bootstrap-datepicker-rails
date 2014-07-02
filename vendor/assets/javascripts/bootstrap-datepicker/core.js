@@ -613,7 +613,7 @@
 			if (arguments.length){
 				$.each(arguments, $.proxy(function(i, date){
 					if (date instanceof Date)
-						date = this._local_to_utc(date);
+						date = this._local_to_utc(this._zero_time(date));
 					dates.push(date);
 				}, this));
 				fromArgs = true;
